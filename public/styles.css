@@ -1,0 +1,89 @@
+/* General Reset */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+body {
+    background: linear-gradient(to bottom, #6dd5fa, #ffffff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container Styling */
+.container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 525px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Form Styling */
+form {
+    margin: 20px 0;
+}
+
+form input {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    margin:.5px;
+}
+
+form button {
+    margin-top: 1rem; 
+    padding: 10px 20px;
+    background-color: #6dd5fa;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: #4facfe;
+}
+
+/* Result Styling */
+.result, .error {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.error {
+    color: #ff4d4d;
+}
+
+.result {
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    form input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    form button {
+        width: 100%;
+    }
+}

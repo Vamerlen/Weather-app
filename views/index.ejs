@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Will it Rain Tomorrow?</h1>
+        <form action="/" method="POST">
+            <input type="text" name="city" placeholder="Enter city name" required>
+            <button type="submit">Check Weather</button>
+        </form>
+        <% if (weather) { %>
+            <div class="result">
+                <h2>Weather in <%= weather.city %></h2>
+                <p>🌡️ Temperature: <%= weather.temp %>°C</p>
+                <p>🌡️ Feels Like: <%= weather.feels_like %>°C</p>
+                <p>☔ Rain: <%= weather.rain %></p>
+                <p>🌤️ Description: <%= weather.description %></p>
+            </div>
+        <% } %>
+        <% if (error) { %>
+            <div class="error">
+                <p><%= error %></p>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>
